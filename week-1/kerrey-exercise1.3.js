@@ -1,7 +1,7 @@
 /*
 ============================================
 ; Title: Exercise 1.3 - Modules
-; File Name: kerrey-exercise.js
+; File Name: kerrey-exercise1.3.js
 ; Author: Professor Krasso
 ; Date: 9 January 2022
 ; Modified By: Seth Kerrey
