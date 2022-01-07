@@ -12,10 +12,12 @@
 ===========================================
 */
 
-var url = require("url");
+var url = require("url"); // to import Node specific library
 
-var parsedURL = url.parse("https://www.example.com/profile?name=notsmith");
+// Variable to hold string value 
+var parsedURL = url.parse("https://www.example.com/profile?name=notsmith"); // Parse function to segregate out pieces of URL 
 
-console.log(parsedURL.protocol);
-console.log(parsedURL.host);
-console.log(parsedURL.query);
+// Functions to call on the URL string
+console.log(parsedURL.protocol); // Expected output https:
+console.log(parsedURL.host); // Expected output www.example.com
+console.log(parsedURL.query); // Expected output name=notsmith
