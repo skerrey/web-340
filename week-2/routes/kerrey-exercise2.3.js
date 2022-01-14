@@ -11,6 +11,13 @@
 ; Resources:
 ;   Code was provided by Prof Krasso in WEB 340/week-2/exercise2.3
 ;   Express and Node used
+; Comments:
+;   app.method(url_pattern, optional_functions, request_handler_function);
+;   app.get(“/”, function(request, response) { // response code });
+;   app.get(“/about”, function(request, response) { // response code });
+;   app.post(“/forms/update_user_info.json”, function(request, response) { // response code });
+;   app.put(“/user”, function(request, response) { // response code });
+;   app.delete(“/user”, function(request, response) { // response code });
 ===========================================
 */
 

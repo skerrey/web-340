@@ -10,6 +10,10 @@
 ; Resources:
 ;   Code was provided by Prof Krasso in WEB 340/week-2/exercise2.2
 ;   Express and Node used
+; Comments:
+;   var express = require(“express”) – Requires the Express module just as you would require other modules
+;   var app = express() – Calls the express function to start a new Express application
+;   http.createServer(app).listen(8080) – Starts the server on port 8080
 ===========================================
 */
 
