@@ -10,6 +10,7 @@
 ;       with specific routes and bad requests.
 ; Resources:
 ;   Code was provided by Prof Krasso in WEB 340/week-2/exercise2.3
+;   Express and Node used
 ===========================================
 */
 
