@@ -9,6 +9,7 @@
 ;   Assignment to understand Node and Express app.
 ; Resources:
 ;   Code was provided by Prof Krasso in WEB 340/week-2/exercise2.2
+;   Express and Node used
 ===========================================
 */
 
