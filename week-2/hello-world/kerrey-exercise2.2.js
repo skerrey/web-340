@@ -31,7 +31,7 @@ app.use(function(req, res)
     res.end('Hello World\n');
 })
 
-//Output message application started and what port
+//Output message application started on port 8080
 http.createServer(app).listen(8080, function()
 {
     console.log('Application started on port %s', 8080);
