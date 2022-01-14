@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+<!--
+============================================
+; Title: Assignment 2.4 - EJS Views
+; File Name: index.ejs
+; Author: Professor Krasso
+; Date: 16 January 2022
+; Modified By: Seth Kerrey
+; Description: 
+;   EJS views display page.
+; Resources:
+;   Code was provided by Prof Krasso in WEB 340/week-2/assignment2.4
+;   Bootstrap
+===========================================
+-->         
+        <title>EJS Views Example</title>
+
+        <!-- Bootstrap CDN -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home</a>
+                </li>
+                <li class="nav-item"></li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Contact Us</a>
+                </li>
+            </ul>
+        </nav>
+        <div role="main" class="container">
+            <br>
+            <h2>EJS Views Example</h2>
+            <div class="row">
+
+                <div class="col-sm-12">
+                    <div class="alert alert-success" role="alert">
+                        <strong>firstName: </strong><span><%= firstName %></span><br>
+                        <strong>lastName: </strong><span><%= lastName %></span><br>   
+                        <strong>address: </strong><span><%= address %></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="../kerrey-assignment2.4.js"></script>
+    </body>
+</html>
