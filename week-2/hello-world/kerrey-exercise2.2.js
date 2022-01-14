@@ -1,3 +1,16 @@
+/*
+============================================
+; Title: Exercise 2.2 - Hello World with Express
+; File Name: kerrey-exercise2.2.js
+; Author: Professor Krasso
+; Date: 16 January 2022
+; Modified By: Seth Kerrey
+; Description:
+;   Assignment to understand Node and Express app.
+; Resources:
+;   Code was provided by Prof Krasso in WEB 340/week-2/exercise2.2
+===========================================
+*/
 
 // Require statement for express / http
 var express = require('express'); //Calls express function to start new Express application
