@@ -1,0 +1,20 @@
+
+// Require statement for express / http
+var express = require('express'); //Calls express function to start new Express application
+var http = require('http'); //Library to start server
+
+var app = express(); //Variable for placeholder for Express app
+
+//Return console.log for app/client to access URL
+app.use(function(req, res)
+{
+    console.log('In comes a request to: %s', req.url);
+
+    res.end('Hello World\n');
+})
+
+//Output message application started and what port
+http.createServer(app).listen(8080, function()
+{
+    console.log('Application started on port %s', 8080);
+});
