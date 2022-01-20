@@ -33,25 +33,6 @@ app.get("/", function (req, res) {
         message: "Welcome to the Morgan Logger Example by Seth Kerrey!"
     });
 });
-http.createServer(app).listen(3000, function() {
-    console.log("Application started on port %s", 3000);
+http.createServer(app).listen(8080, function() {
+    console.log("Application started on port %s", 8080);
 });
-
-
-{/* <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
-    <ul class="navbar-nav">
-        <li class="nav-item active">
-            nav-link" href="#">Home
-        li>
-        <li class="nav-item">
-            nav-link" href="#">About
-        li>
-        <li class="nav-item">
-            nav-link" href="#">Contact Us
-        li>
-    ul>
-nav>
-<div role="main" class="container">
-    <br/><br/>
-    <h2><%= message %></h2>
-</div> */}
