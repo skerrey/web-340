@@ -10,6 +10,16 @@
 ; Resources:
 ;   Code was provided by Prof Krasso in WEB 340/week-3/exercise4.3
 ;   Express & Morgan used
+: Comments:
+;   Most common status codes:
+;   200: OK
+;   401: Unauthorized
+;   403: Forbidden
+;   404: Not Found
+;   405: Method Not Allowed
+;   500: Internal Server Error
+;   501: Not Implemented
+;   503: Service Unavailable
 ===========================================
 */
 
