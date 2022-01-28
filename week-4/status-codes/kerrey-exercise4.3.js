@@ -23,21 +23,32 @@ var app = express(); // Placeholder for Express app
 app.use(logger("dev")); // Logger
 
 // Return & response
-app.get("/customer/:id", function (req, res) {
-    var id = parseInt(req.params.id, 10);
+// Requests using status codes
+app.get("/not-found", function (req, res) { // Error 404
+    res.status(404);
     
     res.json({
-        firstName: "John",
-        lastName: "Smith",
-        email: "john@smith.com",
-        address: "123 Avenue",
-        city: "Los Angeles",
-        state: "California",
-        zip: "90017"
+        error: "Resource not found."
     });
 });
 
-// Initialize server on port 8080
-http.createServer(app).listen(8080, function() {
-    console.log("Application started on port %s", 8080);
+app.get("/ok", function (req, res) { // Error 200
+    res.status(200);
+    
+    res.json({
+        error: "Page loaded correctly."
+    });
+});
+
+app.get("/not-implemented", function (req, res) { //Error 501
+    res.status(501);
+    
+    res.json({
+        error: "Page not implemented."
+    });
+});
+
+// Initialize server on port 300
+http.createServer(app).listen(3000, function() {
+    console.log("Application started on port %s", 3000);
 });
