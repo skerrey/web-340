@@ -8,7 +8,7 @@
 ; Description:
 ;   Exercise to understand HTTP status codes with Express and Morgan.
 ; Resources:
-;   Code was provided by Prof Krasso in WEB 340/week-3/exercise4.3
+;   Code was provided by Prof Krasso in WEB 340/week-4/exercise4.3
 ;   Express & Morgan used
 : Comments:
 ;   Most common status codes:

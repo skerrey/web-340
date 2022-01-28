@@ -8,7 +8,7 @@
 ; Description:
 ;   Exercise to understand JSON APIs with Express and Morgan.
 ; Resources:
-;   Code was provided by Prof Krasso in WEB 340/week-3/exercise4.2
+;   Code was provided by Prof Krasso in WEB 340/week-4/exercise4.2
 ;   Express & Morgan used
 ===========================================
 */

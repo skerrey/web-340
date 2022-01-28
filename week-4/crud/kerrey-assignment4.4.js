@@ -8,7 +8,10 @@
 ; Description:
 ;   Exercise to understand cURL with Express and Morgan.
 ; Resources:
-;   Code was provided by Prof Krasso in WEB 340/week-3/exercise4.4
+;   Code was provided by Prof Krasso in WEB 340/week-4/exercise4.4
+;   &
+;   GitHub repo buwebdev/web-340/week-4/crud/app.js
+;       https://github.com/buwebdev/web-340/blob/master/week-4/crud/app.js
 ;   Express & Morgan used
 ===========================================
 */
