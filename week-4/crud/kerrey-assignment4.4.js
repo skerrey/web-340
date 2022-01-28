@@ -13,28 +13,34 @@
 ===========================================
 */
 
-const express = require("express");
-const http = require("http");
+// Require statements 
+var express = require("express"); 
+var http = require("http");
+var logger = require("morgan");
 
-let app = express();
+var app = express(); // Placeholder for Express app
+
+app.use(logger("dev")); // Logger
+
 app.set("port", process.env.PORT || 3000);
 
-app.get("/", function(req, res) {
+app.get("/", function(req, res) { // Get request
   res.send("API invoked as an HTTP GET request.");
 });
 
-app.put("/", function(req, res) {
+app.put("/", function(req, res) { // Put request
   res.send("API invoked as an HTTP PUT request.");
 });
 
-app.post("/", function(req, res) {
+app.post("/", function(req, res) { // Post request
   res.send("API invoked as an HTTP POST request");
 });
 
-app.delete("/", function(req, res) {
+app.delete("/", function(req, res) { // Delete request
   res.send("API invoked as an HTTP DELETE request");
 });
 
+// Initialize server
 http.createServer(app).listen(app.get("port"), function() {
   console.log(`Application started and listening on port ${app.get("port")}`);
 });
