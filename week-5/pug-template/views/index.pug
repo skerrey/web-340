@@ -1,0 +1,34 @@
+//-
+    ============================================
+    ; Title: Exercise 5.3 - Pug Template
+    ; File Name: index.pug
+    ; Author: Professor Krasso
+    ; Date: 6 February 2022
+    ; Modified By: Seth Kerrey
+    ; Description: 
+    ;   Pug views display page for kerrey-exercise5.3.js
+    ; Resources:
+    ;   Code was provided by Prof Krasso in WEB 340/week-5/exercise5.3
+    ;   Bootstrap CDN
+    ===========================================
+
+html
+    head
+        title Exercise 5.2 Pug Template Example 
+        link(rel="stylesheet", href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css")
+    body 
+        nav.navbar.navbar-dark.bg-dark.navbar-expand-sm 
+            ul.navbar-nav 
+                li.nav-item     
+                    a.nav-link(href="#") Home 
+                li.nav-item     
+                    a.nav-link(href="#") About
+                li.nav-item     
+                    a.nav-link(href="#") Contact Us 
+        br
+        br
+        div.container
+            div.row
+                div.col-md-12
+                    h2 Exercise 5.3 - Pug Templates 
+                    p.alert.alert-success= message
