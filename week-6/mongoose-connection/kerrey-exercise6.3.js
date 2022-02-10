@@ -9,6 +9,6 @@
 ;   Exercise to understand Mongoose.
 ; Resources:
 ;   Code was provided by Prof Krasso in WEB 340/week-5/exercise6.3
-;   Mongoose Used
+;   Express, Morgan, & Mongoose used
 ===========================================
 */
