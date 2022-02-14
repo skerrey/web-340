@@ -1,7 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
 <!--
 ============================================
 ; Title: Assignment 5.4 - EMS (Milestone 1)
@@ -15,30 +11,30 @@
 ;   Code was provided by Prof Krasso in WEB 340/week-5/assignment5.4
 ;   Bootstrap CDN
 ===========================================
--->         
-        <title>Exercise 5.2 -If...Else...Render</title>
-
-        <!-- Bootstrap CDN -->
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-
-    </head>
+-->  
+<!DOCTYPE html>
+<html lang="en">
+    <%- include("header") %> <!-- header.ejs -->
     <body>
-        <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
-            <ul class="navbar-nav">
-                <li class="nav-item active">
-                    <a href="#" class="nav-link">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#" class="nav-link">About</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#" class="nav-link">Contact Us</a>
-                </li>
-            </ul>
-        </nav>
-        <div role="main" class="container">
+        <%- include("navbar") %> <!-- navbar.ejs -->
            
+        <h1 class="text-center mt-5 pt-5">Welcome to the Home Page!</h1>
+        <h4 class="text-center font-italic">(index.ejs)</h4>
 
+        <div class="container text-center py-5">
+            <h3>Please choose one of the following:</h3>
+            <div class="row">
+                <div class="col-md-12">
+                    <a class="btn btn-primary py-3" href="/list" role="button">Employee Records</a>
+                    <a class="btn btn-success btn-primary py-3" href="/new" role="button"> Data Entry</a>
+                    <a class="btn btn-secondary btn-primary py-3" href="/view" role="button">Employee Records<span style="color:black;"> (Read Only)</span></a>
+                </div>
+            </div>
         </div>
+
+
+        <%- include("footer") %> <!-- footer.ejs -->
+
+        <%- include("scripts") %> <!-- scripts.ejs -->
     </body>
 </html>
