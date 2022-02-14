@@ -25,11 +25,31 @@ app.set("views", path.resolve(__dirname, "views"));
 app.set("view engine", "ejs"); // Views
 app.use(logger("short")); // Logger
 
-app.get("/", function (req, res) { // Get request
+app.get("/", function (req, res) { // index.ejs
     res.render("index", {
         title: "Home page"
     });
 });
+
+app.get("/new", function (req, res) { // new.ejs
+    res.render("new", {
+        title: "Data Entry Page"
+    });
+});
+
+app.get("/list", function (req, res) { // list.ejs
+    res.render("list", {
+        title: "Employee Records",
+    });
+});
+
+app.get("/view", function (req, res) { // view.ejs
+    res.render("view", {
+        title: "View Employee Records",
+    });
+});
+
+
 
 // Initialize server
 http.createServer(app).listen(8080, function() {
