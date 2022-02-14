@@ -16,3 +16,29 @@
 
 new.ejs
 Data entry page -->
+
+<!DOCTYPE html>
+<html lang="en">
+    <%- include("header") %> <!-- header.ejs -->
+    <body>
+        <%- include("navbar") %> <!-- navbar.ejs -->
+          
+        
+        <h1 class="text-center mt-5 pt-5">Welcome to the Data Entry Page!</h1>
+        <h4 class="text-center font-italic">(new.ejs)</h4>
+        
+        <div class="d-flex justify-content-center pt-3 pb-5">
+            <div class="border pb-5" style="width:60%;height:400px;"></div>
+        </div>
+        
+        <div class="text-center">
+            <a class="btn btn-success btn-primary" href="/" role="button">Return</a>
+        </div>
+        
+        
+
+        <%- include("footer") %> <!-- footer.ejs -->
+
+        <%- include("scripts") %> <!-- scripts.ejs -->
+    </body>
+</html>
