@@ -3,7 +3,7 @@
 ; Title: Exercise 7.2 - TDD in Action
 ; File Name: kerrey-exercise7.2.js
 ; Author: Professor Krasso
-; Date: 13 February 2022
+; Date: 20 February 2022
 ; Modified By: Seth Kerrey
 ; Description:
 ;   Exercise to understand TDD in action.
