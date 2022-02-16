@@ -1,0 +1,11 @@
+{
+    "name": "tdd-example",
+    "author": "Seth Kerrey",
+    "private": true,
+    "dependencies": {
+
+    },
+    "scripts": {
+        "test": "mocha"
+      }
+}
