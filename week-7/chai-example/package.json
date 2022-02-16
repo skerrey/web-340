@@ -3,9 +3,10 @@
     "author": "Seth Kerrey",
     "private": true,
     "dependencies": {
-
+        "chai": "^4.3.6",
+        "mocha": "^9.2.0"
     },
     "scripts": {
         "test": "mocha"
-      }
+    }
 }
