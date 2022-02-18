@@ -19,7 +19,7 @@ var http = require("http");
 var path = require("path");
 var logger = require("morgan");
 var mongoose = require("mongoose");
-const employee = require("./modes/employee");
+const employee = require("./models/employee");
 
 // App functions --------------------------------------------------------------
 var app = express(); // Placeholder for Express app
@@ -63,14 +63,14 @@ mongoose.Promise = global.Promise;
 var db = mongoose.connection; // Database variable to hold connection
 db.on("error", console.error.bind(console, "MongoDB connection error: ")); // Error handling
 db.once("open", function() {
-    console.log("application connected to mLab"); // Connected message
-})
+    console.log("application connected to mLab: MongoDB Atlas Cluster"); // Connected message
+});
 
 // Model
-var employee = new employee({
-    firstName: "Leroy",
-    lastName: "Jenkins"
-})
+// var employee = new employee({
+//     firstName: "Leroy",
+//     lastName: "Jenkins"
+// });
 
 // Initialize server -------------------------------------------------------------
 http.createServer(app).listen(8080, function() {
