@@ -1,6 +1,6 @@
 /*
 ============================================
-; Title: Assignment 7.3 - EMS (Milestone 3 - Mongoose Schema & Model Development)
+; Title: Assignment 7.4 - EMS (Milestone 3 - Mongoose Schema & Model Development)
 ; File Name: employee.js
 ; Author: Professor Krasso
 ; Date: 20 February 2022
