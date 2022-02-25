@@ -20,18 +20,42 @@ Tabular view of employee records -->
     <%- include("header") %> <!-- header.ejs -->
     <body>
         <%- include("navbar") %> <!-- navbar.ejs -->
-           
+        <div style="height:100%;margin-bottom:100px;">   
         <h1 class="text-center mt-5 pt-5">Welcome to Employee Records Page!</h1>
         <h4 class="text-center font-italic">(list.ejs)</h4>
 
-        <div class="d-flex justify-content-center pt-3 pb-5">
-            <div class="border pb-5" style="width:60%;height:400px;"></div>
-        </div>
-        
-        <div class="text-center">
-            <a class="btn btn-success btn-primary" href="/" role="button">Return</a>
-        </div>
 
+            <div class="d-flex justify-content-center pt-3 pb-5">
+                <div class="border pb-5" style="width:60%;height:400px;">
+                
+                    <% if (employees.length) { %>
+                    <h2 class="pl-3 pt-2">‐‐ Employee Listing ‐‐</h2><br />
+                    <a class="btn btn-success mb-3 ml-5" href="/new">Add New</a>
+                    <a class="btn btn-secondary mb-3 ml-5" href="/">Return</a>
+                    <table class="table table‐hover">
+                        <thead class="thead‐dark">
+                            <tr>
+                                <th>First    Name</th>
+                                <th>Last Name</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <% employees.forEach(function (entry) { %>
+                            <tr>
+                                <td><%= entry.firstName %></td>
+                                <td><%= entry.lastName %></td>
+                            </tr>
+                        </tbody>
+                        <% }) %>
+                    </table>
+                    <% } else { %>
+                        No entries! <a href="/new">Add one!</a>
+                    <% } %>
+                
+                </div>
+            </div>
+        
+</div>
         <%- include("footer") %> <!-- footer.ejs -->
 
         <%- include("scripts") %> <!-- scripts.ejs -->

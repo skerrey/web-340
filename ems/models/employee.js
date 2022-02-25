@@ -18,7 +18,7 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 // Employee Schema
-let EmployeeSchema = new Schema({ // Fields below for Employee Schema
+var EmployeeSchema = new Schema({ // Fields below for Employee Schema
   firstName: {type: String, required: true},
   lastName: {type: String, required: true}
 });

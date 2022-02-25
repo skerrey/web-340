@@ -28,11 +28,34 @@ Data entry page -->
         <h4 class="text-center font-italic">(new.ejs)</h4>
         
         <div class="d-flex justify-content-center pt-3 pb-5">
-            <div class="border pb-5" style="width:60%;height:400px;"></div>
+            <div class="border pb-5" style="width:60%;height:400px;">
+                
+                <form method="post" action="/process">
+
+                    <!-- First Name -->
+                    <div class="form-group">
+                        <label for="txtFirstName">First Name:</label>
+                        <input type="text" class="form-control" id="txtFirstName" placeholder="First Name" name="txtFirstName" required>
+                    </div>
+
+                    <!-- Last Name -->
+                    <div class="form-group">
+                        <label for="txtLastName">Last Name:</label>
+                        <input type="text" class="form-control" id="txtLastName" placeholder="Last Name" name="txtLastName" required>
+                    </div>
+
+                    <div class="form-group">
+                        <!-- CSRF token -->
+                        <input name="_csrf" value="<%= csrfToken %>" type="hidden" />
+                        <button type="submit" class="btn btn-success">Submit</button>
+                    </div>
+
+                </form>
+            </div>
         </div>
         
         <div class="text-center">
-            <a class="btn btn-success btn-primary" href="/" role="button">Return</a>
+            <a class="btn btn-secondary" href="/" role="button">Return</a>
         </div>
         
         
