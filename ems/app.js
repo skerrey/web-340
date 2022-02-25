@@ -20,18 +20,22 @@ var path = require("path");
 var logger = require("morgan");
 var mongoose = require("mongoose");
 const employee = require("./models/employee");
+var helmet = require("helmet");
 
 // App functions --------------------------------------------------------------
 var app = express(); // Placeholder for Express app
 app.set("views", path.resolve(__dirname, "views")); // Directory 
 app.set("view engine", "ejs"); // Views
 app.use(logger("short")); // Logger
+app.use(helmet.xssFilter());
+
 
 
 // Pages: home, new, list, view -------------------------------------------------
 app.get("/", function (req, res) { // index.ejs
     res.render("index", {
-        title: "Home page"
+        title: "Home page",
+        message: "XSS Prevention Example"
     });
 });
 
