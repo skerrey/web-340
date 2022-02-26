@@ -31,9 +31,13 @@ Read-only page with the selected employee’s details -->
             
                 <div class="form-group">
                     <label for="txtName">Name:</label>
-                    <input type="text" class="form-control" id="txtName" placeholder="View" readonly value="<%= employee[0].firstName %>" name="txtName"/>
-                  </div>
+                    <input type="text" class="form-control" placeholder="First Name" readonly value="<%= employee[0].firstName %>" name="txtName"/>
+                </div>
 
+                <div class="form-group">
+                    <label for="txtName">Name:</label>
+                    <input type="text" class="form-control"  placeholder="Last Name" readonly value="<%= employee[0].lastName %>" name="txtName">
+                </div>
             </div>
         </div>
         
