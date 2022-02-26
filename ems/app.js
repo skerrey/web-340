@@ -75,7 +75,7 @@ app.get("/new", function (req, res) { // new.ejs
     });
 });
 
-app.get("/list", function(req, res) {
+app.get("/list", function(req, res) { // list.ejs
     Employee.find({}, function(error, employees) {
         if (error) {
             console.log(error);
@@ -90,33 +90,34 @@ app.get("/list", function(req, res) {
     });
 });
 
-
-app.get("/view/:queryName", function(req, res) { // list.ejs
-    const queryName = req.params['queryName'];
-  
-    Employee.find({"First Name": queryName}, function(err, employees) {
-        if (err) {
-            console.log(err);
-            throw err;
-        } else {
-            console.log(employees);
-            if (employees.length > 0) {
-                res.render("view", {
-                title: 'View Employee Records',
-                employee: employees
-                })
-            } else {
-                res.redirect('/');
-            }
-        }
-    })
-});
-
-  app.get("/view", function (req, res) { // view.ejs
+app.get("/view", function (req, res) { // view.ejs
     res.render("view", {
         title: "View Employee Records",
     });
 });
+
+// app.get("/view/:queryName", function(req, res) { // view.ejs
+//     const queryName = req.params['queryName'];
+  
+//     Employee.find({"First Name": queryName}, function(err, employees) {
+//         if (err) {
+//             console.log(err);
+//             throw err;
+//         } else {
+//             console.log(employees);
+//             if (employees.length > 0) {
+//                 res.render("view", {
+//                 title: 'View Employee Records',
+//                 employee: employees
+//                 })
+//             } else {
+//                 res.redirect('/');
+//             }
+//         }
+//     })
+// });
+
+
 
 // Process form submission
 app.post('/process', function(req, res) {
