@@ -90,32 +90,22 @@ app.get("/list", function(req, res) { // list.ejs
     });
 });
 
-app.get("/view", function (req, res) { // view.ejs
-    res.render("view", {
-        title: "View Employee Records",
+app.get("/view/:queryName", function(req, res) { // view.ejs
+    var queryName = req.params.queryName;
+  
+    Employee.find({"firstName": queryName}, function(error, employees) {
+        if (error) throw error;
+        console.log(employees);
+        if (employees.length > 0) {
+            res.render("view", {
+            title: "Employee Records",
+            employee: employees
+            })
+            } else {
+                res.redirect('/list');
+            }
     });
 });
-
-// app.get("/view/:queryName", function(req, res) { // view.ejs
-//     const queryName = req.params['queryName'];
-  
-//     Employee.find({"First Name": queryName}, function(err, employees) {
-//         if (err) {
-//             console.log(err);
-//             throw err;
-//         } else {
-//             console.log(employees);
-//             if (employees.length > 0) {
-//                 res.render("view", {
-//                 title: 'View Employee Records',
-//                 employee: employees
-//                 })
-//             } else {
-//                 res.redirect('/');
-//             }
-//         }
-//     })
-// });
 
 
 

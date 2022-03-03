@@ -29,13 +29,21 @@ Read-only page with the selected employee’s details -->
         <div class="d-flex justify-content-center pt-3 pb-5">
             <div class="border pb-5" style="width:60%;height:400px;">
             
-                
+                <div class="for-group">
+                    <label for="txtName"></label>
+                </div>
 
+                <div class="form-group">
+                    <label for="txtFirstName">First Name:</label>
+                    <input type="text" id="txtFirstName" class="form-control" readonly value="<%= employee[0].firstName %>" name="txtFirstName"/>
+                    <label for="txtLastName">Name:</label>
+                    <input type="text" id="txtLastName" class="form-control" readonly value="<%= employee[0].lastName %>" name="txtLastName"/>
+                </div>
             </div>
         </div>
         
         <div class="text-center">
-            <a class="btn btn-secondary" href="/" role="button">Return</a>
+            <a class="btn btn-secondary" href="/list" role="button">Return to Employees</a>
         </div>
 
         <%- include("footer") %> <!-- footer.ejs -->
