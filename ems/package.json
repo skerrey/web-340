@@ -2,6 +2,12 @@
     "name": "ems",
     "author": "Seth Kerrey",
     "private": true,
+    "scripts": {
+        "start": "node app.js"
+    },
+    "engines": {
+        "node": "v14.16.1"
+    },
     "dependencies": {
         "body-parser": "^1.19.2",
         "cookie-parser": "^1.4.6",
