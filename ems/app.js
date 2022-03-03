@@ -45,6 +45,7 @@ var csrfProtection = csrf({cookie: true});
 var app = express(); // Placeholder for Express app
 app.set("views", path.resolve(__dirname, "views")); // Directory 
 app.set("view engine", "ejs"); // Views
+app.set('port', process.env.PORT || 8080);
 
 // Use statements -------------------------------------------------------------
 app.use(logger("short")); // Logger
@@ -154,6 +155,10 @@ app.get('/employees/delete/:id', function(req, res) {
   })
 
 // Initialize server -------------------------------------------------------------
-http.createServer(app).listen(8080, function() {
-    console.log("Application started on port %s", 8080);
+// http.createServer(app).listen(8080, function() {
+//     console.log("Application started on port %s", 8080);
+// });
+
+http.createServer(app).listen(app.get("port"), function() {
+     console.log("Application started on port " + app.get("port"))
 });
